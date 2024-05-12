@@ -1,4 +1,4 @@
-package punto1;
+package punto1Tp4;
 
 public class Regular extends Empleado {
 

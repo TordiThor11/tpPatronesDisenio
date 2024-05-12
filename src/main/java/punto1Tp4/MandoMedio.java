@@ -1,17 +1,17 @@
-package punto1;
+package punto1Tp4;
 
 import java.util.HashSet;
 
 public class MandoMedio extends Empleado {
-    private HashSet<LiderDeProyecto> empleados;
+    private HashSet<Empleado> empleados;
 
     public MandoMedio(String nombre, int salario) {
         super(nombre, salario);
-        empleados = new HashSet<LiderDeProyecto>();
+        empleados = new HashSet<Empleado>();
     }
 
-    void agregarEmpleado(LiderDeProyecto liderDeProyecto) {
-        this.empleados.add(liderDeProyecto);
+    void agregarEmpleado(Empleado Empleado) {
+        this.empleados.add(Empleado);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class MandoMedio extends Empleado {
     @Override
     int salarioTotalEmpresa() {
         int salarioTotal = salario;
-        for (LiderDeProyecto empleado : empleados) {
+        for (Empleado empleado : empleados) {
             salarioTotal += empleado.salarioTotalEmpresa();
         }
         return salarioTotal;
