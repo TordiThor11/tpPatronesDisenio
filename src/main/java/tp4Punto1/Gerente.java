@@ -2,7 +2,7 @@ package tp4Punto1;
 
 import java.util.HashSet;
 
-public class Gerente extends Empleado {
+public class Gerente extends Empleado implements Responsable {
     private HashSet<Empleado> empleados;
 
     public Gerente(String nombre, int salario) {
@@ -10,7 +10,7 @@ public class Gerente extends Empleado {
         empleados = new HashSet<Empleado>();
     }
 
-    void agregarEmpleado(Empleado mandoMedio) {
+    public void agregarEmpleado(Empleado mandoMedio) {
         this.empleados.add(mandoMedio);
     }
 

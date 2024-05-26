@@ -2,7 +2,7 @@ package tp4Punto1;
 
 import java.util.HashSet;
 
-public class Director extends Regular {
+public class Director extends Regular implements Responsable {
     private HashSet<Empleado> empleados;
 
     public Director(String nombre, int salario) {

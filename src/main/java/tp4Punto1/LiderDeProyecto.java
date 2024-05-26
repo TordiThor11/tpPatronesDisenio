@@ -2,7 +2,7 @@ package tp4Punto1;
 
 import java.util.HashSet;
 
-public class LiderDeProyecto extends Empleado {
+public class LiderDeProyecto extends Empleado implements Responsable {
     private HashSet<Empleado> empleados;
 
     public LiderDeProyecto(String nombre, int salario) {
