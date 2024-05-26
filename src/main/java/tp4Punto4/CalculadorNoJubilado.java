@@ -1,8 +1,5 @@
 package tp4Punto4;
 
-import static java.time.LocalDate.now;
-import static java.time.Month.of;
-
 public class CalculadorNoJubilado extends Calculador {
 
     public CalculadorNoJubilado(int mesEnPromocion) {
@@ -10,6 +7,16 @@ public class CalculadorNoJubilado extends Calculador {
     }
 
     @Override
+    protected double mesSinPromocion(double precioProducto) {
+        return precioProducto * 0.21;//79% de descuento
+    }
+
+    @Override
+    protected double mesConPromocion(double precioProducto) {
+        return precioProducto * 0.15;//85% de descuento
+    }
+
+   /* @Override
     double cantidadDescuento() {
         double cantidadDescuento = 1; //No hay descuento
         if (of(mesEnPromocion).equals(now().getMonth())) {
@@ -18,5 +25,5 @@ public class CalculadorNoJubilado extends Calculador {
             cantidadDescuento = 0.21;//79% de descuento
         }
         return cantidadDescuento;
-    }
+    }*/
 }

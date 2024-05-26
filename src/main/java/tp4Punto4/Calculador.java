@@ -1,5 +1,7 @@
 package tp4Punto4;
 
+import static java.time.LocalDate.now;
+
 public abstract class Calculador {
     protected int mesEnPromocion;
 
@@ -8,9 +10,19 @@ public abstract class Calculador {
     }
 
     public double calcularPrecio(double precioProducto) {
-        return precioProducto * cantidadDescuento();
+        double precioTotal = precioProducto;
+        if (mesEnPromocion == now().getMonth().getValue()) {
+            precioTotal = mesConPromocion(precioProducto);
+        } else {
+            precioTotal = mesSinPromocion(precioProducto);
+        }
+        return precioTotal;
     }
 
-    abstract double cantidadDescuento();
+//    abstract double cantidadDescuento();
+
+    protected abstract double mesSinPromocion(double precioProducto);
+
+    protected abstract double mesConPromocion(double precioProducto);
 
 }
