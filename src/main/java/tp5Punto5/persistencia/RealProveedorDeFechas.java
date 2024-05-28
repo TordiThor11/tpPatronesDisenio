@@ -1,6 +1,6 @@
 package tp5Punto5.persistencia;
 
-import org.example.sistemacConcursos.ProveedorDeFechas;
+import tp5Punto5.modelo.ProveedorDeFechas;
 
 import java.time.LocalDateTime;
 

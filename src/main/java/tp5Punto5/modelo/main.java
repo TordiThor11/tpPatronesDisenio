@@ -1,7 +1,7 @@
 package tp5Punto5.modelo;
 
-import sistemaConcursos.persistencia.EnSQLRegistroDeInscripcion;
-import sistemaConcursos.persistencia.RealProveedorDeFechas;
+import tp5Punto5.persistencia.EnSQLRegistroDeInscripcion;
+import tp5Punto5.persistencia.RealProveedorDeFechas;
 
 import java.time.LocalDateTime;
 

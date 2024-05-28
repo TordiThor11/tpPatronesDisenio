@@ -1,6 +1,6 @@
 package tp5Punto5.persistencia;
 
-import org.example.sistemacConcursos.RegistroDeInscripcion;
+import tp5Punto5.modelo.RegistroDeInscripcion;
 
 import java.io.IOException;
 import java.nio.file.Files;
