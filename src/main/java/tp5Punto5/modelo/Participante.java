@@ -22,4 +22,8 @@ public class Participante {
     public int getDni() {
         return this.dni;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
 }

@@ -1,12 +1,13 @@
-package tp5Punto5.modelo;
+package tp6Punto4.mail;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
+import tp6Punto4.model.EnvioDeMail;
 
 import java.util.Properties;
 
-public class MailJakarta implements Mail {
+public class MailJakarta implements EnvioDeMail {
     final private String username;
     final private String password;
     private String host;
@@ -19,9 +20,9 @@ public class MailJakarta implements Mail {
         this.password = password;
     }
 
-    public void enviarMail(String tema, String mensaje) {
+    public void enviarMail(String mailTo, String tema, String mensaje) {
         //provide recipient's email ID
-        String to = "jakartato@example.com";
+        String to = mailTo;
         //provide sender's email ID
         String from = "jakartafrom@example.com";
         //configure Mailtrap's SMTP server details
@@ -32,7 +33,7 @@ public class MailJakarta implements Mail {
         props.put("mail.smtp.port", "587");
         //create the Session object
         Session session = Session.getInstance(props,
-                new jakarta.mail.Authenticator() {
+                new Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
                         return new PasswordAuthentication(username, password);
                     }
