@@ -3,6 +3,8 @@ package tp6Punto5.modelo;
 import java.util.List;
 
 abstract class Tarjeta extends Observable {
+    /*La persistencia deberia seguir estando por inyeccion,
+     por lo general el patron observer se usa para otro tipo de cosas*/
     protected int numeroTarjeta;
     protected double saldo;
 

@@ -1,4 +1,4 @@
-package tp6Punto1;
+package tp6Punto1.modelo;
 
 import java.util.List;
 
@@ -11,9 +11,9 @@ public class Medidor extends Observable {
         this.clima = clima;
     }
 
-    public String leerTemperatura() {
-//leo la temperatura del servicio web
+    public void leerTemperatura() {
+        //leo la temperatura del servicio web
         this.temperatura = this.clima.temperatura();
-        return this.temperatura;
+        super.notificar(this.temperatura);
     }
 }

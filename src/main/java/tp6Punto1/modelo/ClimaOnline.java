@@ -1,4 +1,4 @@
-package tp6Punto1;
+package tp6Punto1.modelo;
 
 public interface ClimaOnline {
 

@@ -1,4 +1,4 @@
-package tp6Punto1;
+package tp6Punto1.modelo;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ public class Observable {
         this.observadores = observadores;
     }
 
-    public void notificar(String info) {
+    protected void notificar(String info) {
         this.observadores.stream().forEach((o) -> o.actualizar(info));
     }
 }
