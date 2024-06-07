@@ -12,5 +12,10 @@ public class Main {
         for (Telefono telefono : miPersona.getTelefonos()) {
             System.out.println(telefono);
         }
+        System.out.println("Cambio...");
+        var telefonos = personaDao.telefonosPorId(124);
+        for (Telefono telefono : telefonos) {
+            System.out.println(telefono.toString());
+        }
     }
 }
